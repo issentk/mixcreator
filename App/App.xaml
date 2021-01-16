@@ -1,0 +1,8 @@
+﻿<Application x:Class="MixCreator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MixCreator">
+    <!-- Remove the StartupUri property, start the application from a static Main -->
+    <Application.Resources>
+    </Application.Resources>
+</Application>

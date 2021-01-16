@@ -1,0 +1,29 @@
+﻿<Window x:Class="MixCreator.Window.SongDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MixCreator"
+        mc:Ignorable="d"
+        Title="SongDetail" Height="100" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!--<RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />-->
+            <RowDefinition Height="28" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="URL:"/>
+        <!--<Label Grid.Row="1" Grid.Column="0" Content="E-Mail:"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Comment:"/>-->
+        <TextBox Grid.Column="1" Grid.Row="0" Margin="3" Text="{Binding Path=Song.Url}"/>
+        <!--<TextBox Grid.Column="1" Grid.Row="1" Margin="3" />
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="3" />-->
+        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" 
+            MinWidth="80" Margin="3" Content="Save" Command="{Binding SaveCommand}" CommandParameter="{Binding Song}"/>
+    </Grid>
+</Window>
